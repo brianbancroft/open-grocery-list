@@ -2,6 +2,11 @@
 
 An invite-only shared household grocery and to-do app: Hono/Postgres API plus a native SwiftUI iOS client.
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/new)
+[![Deploy to Fly.io](https://img.shields.io/badge/Deploy%20to-Fly.io-7B3BE4?logo=flydotio&logoColor=white)](https://fly.io/docs/launch/)
+
+The Railway button starts a new Railway project; connect this repository and follow the short [Railway guide](./docs/deploy-railway.md). The Fly button opens Fly Launch; fork the repository and follow the [Fly guide](./docs/deploy-fly.md). Both use the included Dockerfile and require a PostgreSQL database plus your own runtime secrets.
+
 ## Security and access model
 
 Only Sign in with Apple is accepted. The API verifies Apple identity-token signatures against Apple's JWKS, issuer, audience (your bundle ID), and expiration. API sessions are random opaque bearer tokens; only SHA-256 hashes are stored in Postgres. Every mutation requires a valid session.

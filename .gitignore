@@ -1,6 +1,7 @@
 .env
 .env.*
 !.env.example
+fly.toml
 node_modules/
 dist/
 # Node / package tooling
