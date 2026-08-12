@@ -1,20 +1,20 @@
-name: FamilyLists
+name: OpenGroceryList
 options:
   deploymentTarget: { iOS: "17.0" }
 targets:
-  FamilyLists:
+  OpenGroceryList:
     type: application
     platform: iOS
     sources: [FamilyLists]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.familylists
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.opengrocerylist
         INFOPLIST_FILE: FamilyLists/Info.plist
         CODE_SIGN_ENTITLEMENTS: FamilyLists/FamilyLists.entitlements
         SWIFT_VERSION: 5.0
         TARGETED_DEVICE_FAMILY: "1,2"
-  FamilyListsTests:
+  OpenGroceryListTests:
     type: bundle.unit-test
     platform: iOS
     sources: [FamilyListsTests]
-    dependencies: [{ target: FamilyLists }]
+    dependencies: [{ target: OpenGroceryList }]

@@ -1,4 +1,4 @@
-# Family Lists
+# Open Grocery List
 
 An invite-only shared household grocery and to-do app: Hono/Postgres API plus a native SwiftUI iOS client.
 
@@ -30,11 +30,11 @@ RESEND_API_KEY=<optional>
 RESEND_FROM=<optional verified Resend sender>
 ```
 
-Route the API at a private HTTPS hostname such as `familylists-api.<your-domain>`. Leave the Resend variables blank to keep email delivery disabled; invitation creation still succeeds and returns the one-time code to the admin. Database migrations run automatically and safely on API startup.
+Route the API at a private HTTPS hostname such as `open-grocery-list-api.<your-domain>`. Leave the Resend variables blank to keep email delivery disabled; invitation creation still succeeds and returns the one-time code to the admin. Database migrations run automatically and safely on API startup.
 
 ## iOS app
 
-Run `xcodegen generate` in `ios/`, open `FamilyLists.xcodeproj`, select your Apple development team, replace the placeholder bundle identifier, and ensure the Sign in with Apple capability is enabled. The client uses native `ASAuthorizationAppleIDProvider`, lists, confirmation dialogs for deleting whole lists, completion taps, and swipe Edit/Delete actions. Item editing requires exactly one of eight labels.
+Run `xcodegen generate` in `ios/`, open `OpenGroceryList.xcodeproj`, select your Apple development team, replace the placeholder bundle identifier, and ensure the Sign in with Apple capability is enabled. The client uses native `ASAuthorizationAppleIDProvider`, lists, confirmation dialogs for deleting whole lists, completion taps, and swipe Edit/Delete actions. Item editing requires exactly one of eight labels.
 
 ## Validation
 
